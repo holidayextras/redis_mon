@@ -10,11 +10,6 @@ var data;
 var action;
 var timeout;
 
-console.log('');
-console.log(help.programHelp());
-console.log('test2');
-
-
 // Function to see if a given command is an available command
 var isCommand = function(command) {
   for(x in commands) {
@@ -30,10 +25,7 @@ var setAction = function(act) {
   if(action == undefined) {
     action = act;
   } else {
-    console.log('');
-    console.log('Multiple action commands have been sent to redis_mon');
-    console.log('Please either use -c set, -c get, -s (for set) or -g (for get)');
-    console.log('');
+    help.multiAtion()
     process.exit(1);
   }
 }
@@ -51,13 +43,13 @@ if(argvArray.length <= 2) {
 
 // See if redis_mon was passed --help
 if(argv.help != undefined) {
-    help.smallHelp();
+    help.programHelp();
     process.exit(0);
 }
 
 // See if redis_mon was passed -help
 if(argvArray[2] == 'h' && argvArray[3] == 'e' && argvArray[4] == 'l' && argvArray[5] == 'p') {
-  help.smallHelp();
+  help.programHelp();
   process.exit(0);
 } 
 

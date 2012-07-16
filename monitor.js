@@ -9,7 +9,7 @@ var timeout;
 
 module.exports = function(host, port, command, key, data, timeout) {
  // console.log(timeout);
-  console.log(this.timeout + ' s ');
+  //console.log(this.timeout + ' s ');
   
   // Runs function to check for valid input, program exit if not valid
   isValid(host, port, command, key, data);
@@ -53,23 +53,23 @@ var runGetCommand = function(key, client, cb) {
 var isValid = function(host, port, command, key, data) {
   if(host == undefined) {
     console.log('redis_mon requires a host to connect');
-    help.howTo();
+    help.smallHelp();
   }
   else if(port == undefined) {
     console.log('redis_mon requires a port to connect');
-    help.howTo();
+    help.smallHelp();
   }
   else if(command == undefined) {
     console.log('redis_mon requires a command to do a set or get (-c set/get or -s/-g)');
-    help.howTo();
+    help.smallHelp();
   } 
   else if(key == undefined) {
     console.log('redis_mon requires a key to set or get a value');
-    help.howTo();
+    help.smallHelp();
   }
   else if(data == undefined && key == 'set') {
     console.log('redis_mon requires data in order to set a key/value');
-    help.howTo();
+    help.smallHelp();
   } else {
     return true;
   }
