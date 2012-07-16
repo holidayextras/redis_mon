@@ -1,0 +1,13 @@
+{
+  "name": "redis_mon",
+  "version": "0.0.2",
+  "dependencies": {
+    "redis": "0.7.2",
+    "vows": "0.6.3",
+    "optimist": "0.3.4"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "author": "Viktor Trako <viktor.trako@holidayextras.com> (http://www.holidayextras.co.uk)"
+}
