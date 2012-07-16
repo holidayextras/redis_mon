@@ -1,0 +1,11 @@
+{
+  "introduction": "The redis_mon node tool provides a method to test a redis cache with set/get key/values, where the test will timeout if it takes longer than 5 seconds to get a response.",
+  "-h": "Provide the host with this flag e.g. node redis-mon -h 127.0.0.1",
+  "-p": "The port to the redis server, e.g. -p 6379",
+  "-c": "Command set or get, e.g. -c set or -c get",
+  "-k": "The key to pair with given value/data, e.g., -k testKey",
+  "-d": "Data/value to be paired with given key, e.g., -d testData",
+  "-s": "Set command, -s",
+  "-g": "Get command, -g",
+  "-t": "Provide the timeout time in seconds following -t e.g. node redis-mon -t 5"
+}
