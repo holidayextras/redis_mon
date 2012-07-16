@@ -1,3 +1,3 @@
 module.exports = {
-    monitor: require('./run')
+    monitor: require('./lib/run')
 }
